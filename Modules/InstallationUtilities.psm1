@@ -4,9 +4,9 @@ function Add-PathToEnvironment {
     [string] $addedPath
   )
 
-  Resolve-Path $addedPath
+  $cleanedPath = (Resolve-Path $addedPath -ErrorAction Stop).Path.TrimEnd('\')
 
-  Write-Host "Adding the path '$addedPath' to the existing system path" -ForegroundColor Yellow
+  Write-Host "Adding the path '$cleanedPath' to the existing system path" -ForegroundColor Yellow
 
   $currentPath = [Environment]::GetEnvironmentVariable('Path', 'User')
   $newPath = $currentPath
@@ -14,7 +14,7 @@ function Add-PathToEnvironment {
 	$newPath += ';'
   }
 
-  $newPath += $addedPath;
+  $newPath += $cleanedPath;
 
   [Environment]::SetEnvironmentVariable('Path', $newPath, 'User')
 }

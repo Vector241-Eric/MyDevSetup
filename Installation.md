@@ -76,7 +76,8 @@ Some instructions for setting up an alternate comparison / merge tool for git.
 
 Beyond Compare
 --
-	
+1. Download Beyond Compare from http://www.scootersoftware.com/index.php
+
 Make It Unix-y (optional)
 ==
 Old habits die hard. I've spent enough time on Unix / linux boxes that those commandline utilities are still readily under my fingers. I still prefer some of them, so I install the GnuWin32 utilities rather than a completely new shell. This allows me to use some Unix commands in the Powershell consoles.

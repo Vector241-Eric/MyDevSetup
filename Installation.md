@@ -77,6 +77,15 @@ Some instructions for setting up an alternate comparison / merge tool for git.
 Beyond Compare
 --
 1. Download Beyond Compare from http://www.scootersoftware.com/index.php
+1. Run the installation program
+1. Open powershell
+1. Execute `git config --global diff.tool bc`
+1. Execute `git config --global difftool.bc.path "c:/Program Files/Beyond Compare 4/bcomp.exe"`
+
+**To Use Pro Version 3-way Merge**
+
+1. Execute `git config --global merge.tool bc`
+1. Execute `git config --global mergetool.bc.path "c:/Program Files/Beyond Compare 4/bcomp.exe"`
 
 Make It Unix-y (optional)
 ==

@@ -7,8 +7,11 @@ Chocolatey
 1. Install chocolatey.
 	https://chocolatey.org/
 
-Bootstrap Script
+Initial Scripts
 ==
+
+Bootstrap Script
+--
 1. Download MyDevSetup from (https://github.com/Vector241-Eric/MyDevSetup/archive/master.zip).
 1. Unzip into the temp directory of your choice.
 1. Open a powershell console as **Administrator**.
@@ -16,6 +19,12 @@ Bootstrap Script
 1. CD to the location where you unzipped MyDevSetup.
 1. Execute `Bootstrap-DevelopmentMachine.ps1`.
 1. **Close the current Powershell window.**
+
+Second script
+--
+1. Open a new Powershell window as **Administrator**
+1. Change directory to the location where you unzipped MyDevSetup.
+1. Execute `Scripts\Initialize-PostInstallSettings.ps1`
 
 Setup Github
 ==

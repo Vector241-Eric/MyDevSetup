@@ -69,7 +69,13 @@ For this, you'll need:
 1. From the powershell command line, execute `putty github.com`. This should prompt you to accept the fingerprint of the Github server.
 
 Git SSH is now setup.
-	
+
+Git Comparison Tool (optional)
+==
+Some instructions for setting up an alternate comparison / merge tool for git.
+
+Beyond Compare
+--
 	
 Make It Unix-y (optional)
 ==

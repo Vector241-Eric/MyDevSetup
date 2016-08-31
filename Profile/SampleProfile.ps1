@@ -17,12 +17,15 @@ Import-Module .\posh-git
 function global:prompt {
     $realLASTEXITCODE = $LASTEXITCODE
 
+	Write-Host
+	Write-Host("[$(Get-Date -format "HH:mm")] ") -nonewline -ForegroundColor DarkGray
+
     Write-Host($pwd.ProviderPath) -nonewline
 
     Write-VcsStatus
 
     $global:LASTEXITCODE = $realLASTEXITCODE
-    return "> "
+    return "`r`n> "
 }
 
 Pop-Location

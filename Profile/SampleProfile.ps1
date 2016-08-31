@@ -77,4 +77,30 @@ function Import-ProfileModules {
 
 Import-ProfileModules
 
+#
+# Add a function that makes it easy to create symbolic links
+#
+function Add-SymbolicLinkToPath() {
+	Param(
+		[Parameter(Mandatory=$True)]
+		[string]$Target
+	)
+
+	$symlinkDirectory = 'c:\tools\links'
+
+	if (-not (Test-Path -Path $Target)) {
+		throw "Could not locate a file at $Target"
+	}
+
+	if (-not (Test-Path -Path $symlinkDirectory)) {
+		New-Item -Path $symlinkDirectory -ItemType -Directory | out-null
+	}
+
+	$fullPath = (Get-ChildItem $Target).FullName
+	$name = (Get-ChildItem $Target).Name
+
+	Invoke-Expression "cmd /c mklink $symlinkDirectory\$name $fullPath"
+}
+
+
 # End Custom Profile (Do Not Remove This Line)
